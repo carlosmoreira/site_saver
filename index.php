@@ -5,6 +5,7 @@ require 'bootstrap.php';
 
 
 $app = new \Slim\Slim();
+
 $app->config(array(
     'templates.path' => './pages/',
 ));
@@ -20,9 +21,6 @@ $app->get('/', function () use ($entityManager, $app) {
 
 
 });
-
-
-
 
 
 $app->group('/sites', function () use ($app, $entityManager) {
