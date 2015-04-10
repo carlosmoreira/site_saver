@@ -1,0 +1,21 @@
+{
+  "name": "vendor_name/package_name",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "slim/slim": "~2.6",
+    "doctrine/orm": "2.4.*"
+  },
+  "autoload": {
+    "psr-0": {"": "src/"}
+  }
+}
+
+
