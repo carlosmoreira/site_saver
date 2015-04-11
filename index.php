@@ -2,6 +2,9 @@
 require 'bootstrap.php';
 
 
+
+
+
 $app = new \Slim\Slim();
 
 $app->config(array(
@@ -10,14 +13,12 @@ $app->config(array(
 
 
 
-$app->add(new jsonRest());
+$app->add(new \jsonRest());
 $app->get('/', function () use ($entityManager, $app) {
 
     $sites = $entityManager->getRepository("Site")->findAll();
     //var_dump($sites);
     $app->render('view.sites.all.php', array('sites' => $sites));
-
-
 });
 
 
