@@ -1,8 +1,4 @@
-
 <?php
-die("hello111111111111111");
-exit;
-
 require 'bootstrap.php';
 
 
