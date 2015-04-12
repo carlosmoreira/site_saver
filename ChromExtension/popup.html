@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="popup.js"></script>
+</head>
+
+<body style="width: 400px">
+    <div>
+        <span class="text-center" id="currentUrl">www.url.com</span>
+        <form id="formSites" action="google.com">
+            <input type="hidden" id="url" class="form-control" name="url" value="www.site.com" />
+            <textarea style="width:100%;" rows="10" type="text" id="desc" class="form-control" name="description" placeholder="Website Description" ></textarea>
+            <input type="submit" class="form-control btn btn-submit" value="Add" />
+        </form>
+        <button id="showSites">Show All</button>
+        <div id="sites">
+            <ul>
+                <li>one</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
