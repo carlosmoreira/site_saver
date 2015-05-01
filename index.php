@@ -1,4 +1,4 @@
-hello2<?php
+<?php
 require 'bootstrap.php';
 
 
