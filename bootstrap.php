@@ -13,13 +13,7 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
 //$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), $isDevMode);
 
 // database configuration parameters
-$conn = array(
-    'dbname' => 'db_sitesaver',
-    'user' => 'root',
-    'password' => '!!Mac2001',
-    'host' => 'localhost',
-    'driver' => 'pdo_mysql',
-);
+$conn = require 'db_config.php';
 
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
