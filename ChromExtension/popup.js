@@ -2,16 +2,23 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+var config = {
+    "live" : true
+};
+
+
 $(document).ready(function () {
     var console = chrome.extension.getBackgroundPage().console;
 
 
     var apiCall;
-    if (window.location.href.indexOf("localhost") < 1) {
+    if (!config.live) {
         apiCall = "http://localhost:2000/sites";
     } else {
-        apiCall = "sitesaver.therealcarlos.com";
+        apiCall = "http://sitesaver.therealcarlos.com/sites";
     }
+
+
 
     console.log("apiCall", apiCall);
     var tablink = "";
@@ -43,11 +50,11 @@ $(document).ready(function () {
                     window.close();
                 }
             })
-            .fail(function () {
-                console.log("error");
+            .fail(function (error) {
+                console.log("errors", error.error());
             })
             .always(function () {
-                console.log("complete");
+                //console.log("complete");
             });
 
 
